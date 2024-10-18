@@ -1,0 +1,69 @@
+/* Styles for Back to Top button */
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none; /* Show this with JavaScript */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* Ensuring the images stretch to cover the carousel item */
+.carousel-inner img {
+    width: 200px; /* Desired width */
+    height: 200px;
+    object-fit: fill; 
+}
+
+  
+/* Body style */
+body {
+    padding-top: 56px; /* Adjusted for fixed navbar height */
+}
+
+/* Container for the iframe */
+.iframe-container {
+    position: relative;
+    width: 100%; /* Full width */
+    height: 100vh; /* Full viewport height */
+    max-width: 800px; /* Maximum width for larger screens */
+    margin: 0 auto; /* Centering the iframe */
+    overflow: hidden;
+}
+
+
+/* Style for the iframe itself */
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    border: none;
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 600px) {
+    .iframe-container {
+        height: 500px; /* Adjust height for smaller screens */
+    }
+}
+
+/* General styles for sections */
+h2 {
+    margin-top: 40px; /* Space above section titles */
+}
+
+/* Additional styling for testimonials */
+.carousel-inner img {
+    width: auto; /* Responsive images for testimonials */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.testimonial:hover {
+    transform: scale(0.5);
+}

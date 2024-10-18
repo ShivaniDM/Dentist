@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS -->
+    <title>Dr. Smile Dental Clinic</title>
+    <style>
+        /* Styles for Back to Top button */
+        #backToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: none;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        /* Body style */
+        body {
+            padding-top: 56px; /* Adjusted for fixed navbar height */
+        }
+
+        /* Container for the iframe */
+        .iframe-container {
+            position: relative;
+            width: 100%; /* Full width */
+            height: 600px; /* Set a height for the iframe */
+            max-width: 800px; /* Maximum width for larger screens */
+            margin: 0 auto; /* Centering the iframe */
+            overflow: hidden;
+        }
+
+        /* Style for the iframe itself */
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            border: none;
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media screen and (max-width: 600px) {
+            .iframe-container {
+                height: 500px; /* Adjust height for smaller screens */
+            }
+        }
+
+        /* General styles for sections */
+        h2 {
+            margin-top: 40px; /* Space above section titles */
+        }
+
+        /* Additional styling for testimonials */
+        .carousel-inner img {
+            width: 100%; /* Responsive images for testimonials */
+            height: auto; /* Maintain aspect ratio */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Dr. Smile</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Our Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-primary text-white text-center py-5">
+        <h1>Welcome to Dr. Smile Dental Clinic</h1>
+        <p>Your smile is our priority!</p>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="container my-5">
+        <h2 class="text-center mb-4">Our Services</h2>
+        <div id="serviceCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Service 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">Teeth Whitening</h5>
+                                    <p class="card-text">Brighten your smile with our professional teeth whitening services.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Service 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Root Canal Treatment</h5>
+                                    <p class="card-text">Pain-free root canal treatments performed by our experienced dentists.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Service 3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Dental Implants</h5>
+                                    <p class="card-text">Restore your smile with our advanced dental implant solutions.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#serviceCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#serviceCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="container my-5">
+        <h2 class="text-center mb-4">Testimonials</h2>
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="https://streitzdental.com/wp-content/uploads/2020/06/IMG_5616-scaled.jpg" class="mb-3" alt="Patient 1">
+                        <p class="text-center">"I had a wonderful experience! The staff was very professional and caring."</p>
+                        <h5 class="mt-2">- Sarah K.</h5>
+                    </div>
+                </div>
+                <!-- Add more carousel items here -->
+                <div class="carousel-item active">
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="https://th.bing.com/th/id/OIP.6tsgkrPwdmJrCHeCHaNjbQHaEL?w=333&h=187&c=7&r=0&o=5&pid=1.7" class="mb-3" alt="Patient 1">
+                        <p class="text-center">"I had a wonderful experience! The staff was very professional and caring."</p>
+                        <h5 class="mt-2">- Sarah K.</h5>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="https://th.bing.com/th/id/OIP.-iZW3TtZyzaNBLTwjxQ5FAAAAA?rs=1&pid=ImgDetMain" class="mb-3" alt="Patient 1">
+                        <p class="text-center">"I had a wonderful experience! The staff was very professional and caring."</p>
+                        <h5 class="mt-2">- Sarah K.</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container my-5">
+        <h2 class="text-center mb-4">Contact Us</h2>
+        <!-- Google Form embedded in the website -->
+        <div class="iframe-container">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc1FWOyazWz6JIxEB8oZKyJE5u2D0uqE079jOWmecwkz-RViw/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" onclick="scrollToTop()">Back to Top</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"></script>
+    <script>
+        // Back to Top button functionality
+        window.onscroll = function() {
+            var button = document.getElementById("backToTop");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+</body>
+</html>
