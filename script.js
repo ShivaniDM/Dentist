@@ -1,14 +1,37 @@
-// Show or hide the Back to Top button based on scroll position
-window.onscroll = function() {
-    const backToTopButton = document.getElementById("backToTop");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+// Back to Top Button Functionality
+const backToTopButton = document.getElementById("backToTop");
+
+// Show/hide button based on scroll position
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
         backToTopButton.style.display = "block";
     } else {
         backToTopButton.style.display = "none";
     }
-};
+});
 
-// Scroll to the top of the document
-function scrollToTop() {
-    window.scrollTo({top: 0, behavior: 'smooth'});
-}
+// Smooth scroll to top
+backToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+// Initialize Bootstrap Carousel
+document.addEventListener('DOMContentLoaded', () => {
+    const testimonialCarousel = new bootstrap.Carousel(document.getElementById('testimonialCarousel'), {
+        interval: 5000,  // 5 seconds per slide
+        touch: true      // Enable touch swiping on mobile
+    });
+});
+
+// Smooth scroll for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
