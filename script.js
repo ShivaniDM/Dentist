@@ -18,13 +18,7 @@ backToTopButton.addEventListener('click', () => {
     });
 });
 
-// Initialize Bootstrap Carousel
-document.addEventListener('DOMContentLoaded', () => {
-    const testimonialCarousel = new bootstrap.Carousel(document.getElementById('testimonialCarousel'), {
-        interval: 2000,  // 2 seconds per slide
-        touch: true      // Enable touch swiping on mobile
-    });
-});
+
 
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
