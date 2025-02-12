@@ -21,7 +21,7 @@ backToTopButton.addEventListener('click', () => {
 // Initialize Bootstrap Carousel
 document.addEventListener('DOMContentLoaded', () => {
     const testimonialCarousel = new bootstrap.Carousel(document.getElementById('testimonialCarousel'), {
-        interval: 5000,  // 5 seconds per slide
+        interval: 2000,  // 2 seconds per slide
         touch: true      // Enable touch swiping on mobile
     });
 });
