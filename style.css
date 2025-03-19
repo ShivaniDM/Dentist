@@ -4,25 +4,90 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
+
 /* Navigation */
 .navbar {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 /* Services Section */
-.service-img {
-    height: 200px;
-    object-fit: cover;
+
+#services {
+    background-image: url('images/background-img-dentist.jpg');
+    height: 700px;
+    background-size: 100% 100%;    
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.card {
-    transition: transform 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+/* Title */
+#services h2 {
+    padding: 10px 10px 10px 10px;
+    font-size: 2rem;
+    color: aliceblue;
+    background-color: #0d6efd;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    border-radius: 5px;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+
+/* Service List */
+#services ul {
+    list-style: none;
+    padding: 0;
 }
+
+#services li {
+    background: #fff;
+    padding: 12px 20px;
+    margin: 10px auto;
+    width: 80%;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #555;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Add Icons */
+#services li::before {
+    content: "🦷";
+    font-size: 1.2rem;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+/* Hover Effect */
+#services li:hover {
+    background-color: #ff6b00;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/*header for photos previously known as testimonials*/
+#gallery {
+    font-size: 2rem; 
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+
 
 /* Testimonials Section */
 .testimonial-container {
@@ -33,7 +98,7 @@ body {
     background-color: #f8f9fa;
     border-radius: 10px;
     margin: 0 auto;
-    max-width: 900px;
+    max-width: 400px;
 }
 
 .transformation-image-container {
@@ -67,15 +132,14 @@ body {
 
 .treatment-description {
     color: #02080f;
-    font-weight: 500;
+    font-weight: bold;
     margin: 0.5rem 0;
+    background-color: #ff6b00;
+    border-radius: 50px;
+    color: #3b3530;
+    padding: 20px 10px;
 }
 
-.testimonial-author {
-    font-weight: bold;
-    color: #333;
-    margin-top: 1rem;
-}
 
 /* Contact Form Section */
 .iframe-container {
