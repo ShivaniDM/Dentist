@@ -1,21 +1,58 @@
+@media screen and (max-width: 768px) {
+    #services li {
+        font-size: 1rem; /* Reduce font size for smaller screens */
+        padding: 10px 15px; /* Adjust padding */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #services li {
+        font-size: 0.9rem; /* Further reduce font size for smaller screens */
+        padding: 8px 12px;
+    }
+}
+
 /* General Styles */
 body {
+    background-color: #f4f6f8;
     padding-top: 56px;
     font-family: 'Arial', sans-serif;
 }
-
 
 /* Navigation */
 .navbar {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Services Section */
+/* Responsive Headings */
+.section-title {
+    width: 90%;
+    max-width: 400px;
+    color: aliceblue;
+    background-color: #0d6efd;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 2rem;
+    margin: 0 auto 20px;
+    text-align: center;
+}
 
+@media screen and (max-width: 768px) {
+    .section-title {
+        font-size: 1.75rem;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .section-title {
+        font-size: 1.5rem;
+        width: 75%;
+    }
+}
+
+/* Services Section */
 #services {
-    background-image: url('images/background-img-dentist.jpg');
-    height: 700px;
-    background-size: 100% 100%;    
     max-width: 800px;
     margin: 50px auto;
     text-align: center;
@@ -24,21 +61,6 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Title */
-#services h2 {
-    padding: 10px 10px 10px 10px;
-    font-size: 2rem;
-    color: aliceblue;
-    background-color: #0d6efd;
-    margin-bottom: 20px;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 5px;
-    border-radius: 5px;
-}
-
-
-/* Service List */
 #services ul {
     list-style: none;
     padding: 0;
@@ -50,98 +72,135 @@ body {
     margin: 10px auto;
     width: 80%;
     border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: left;
     font-size: 1.1rem;
     font-weight: bold;
     color: #555;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: 0.3s ease-in-out;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: left;
 }
 
-/* Add Icons */
 #services li::before {
     content: "🦷";
     font-size: 1.2rem;
     margin-right: 10px;
-    display: inline-block;
 }
 
-/* Hover Effect */
 #services li:hover {
     background-color: #ff6b00;
     color: white;
+    text-shadow: 3px 3px 5px rgba(48, 21, 21, 0.5);
     transform: scale(1.05);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
-/*header for photos previously known as testimonials*/
-#gallery {
-    font-size: 2rem; 
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
-    position: relative;
-    padding-bottom: 5px;
-}
 
 
-
-/* Testimonials Section */
-.testimonial-container {
+/* buttons for placeholder section */
+.floating-buttons {
+    position: fixed;
+    right: 10px; /* Ensure it's aligned to the right */
+    bottom: 100px;
     display: flex;
     flex-direction: column;
+    align-items: flex-end; /* Aligns buttons to the right */
+    gap: 10px;
+    z-index: 1000; /* Keeps buttons above other content */
+}
+.floating-btn {
+    display: flex;
     align-items: center;
-    padding: 2rem;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    margin: 0 auto;
-    max-width: 400px;
-}
-
-.transformation-image-container {
-    width: 100%;
-    max-width: 600px;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.transformation-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    aspect-ratio: 3/4;
-    object-fit: cover;
-}
-
-.testimonial-content {
-    text-align: center;
-    max-width: 600px;
-}
-
-.testimonial-text {
-    font-style: italic;
-    margin: 1rem 0;
-    font-size: 1.1rem;
-    color: #555;
-}
-
-.treatment-description {
-    color: #02080f;
-    font-weight: bold;
-    margin: 0.5rem 0;
+    justify-content: center;
     background-color: #ff6b00;
+    color: white;
+    font-size: 20px; /* Increase font size to make icon visible */
+    border: 3px solid white;
     border-radius: 50px;
-    color: #3b3530;
-    padding: 20px 10px;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: width 0.3s ease-in-out, padding 0.3s ease-in-out;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.floating-btn .icon {
+    opacity: 1; /* Ensure icon is always visible */
+    font-size: 24px; /* Make icon larger */
+    display: flex; /* Ensure it is centered */
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Take full button width */
+    height: 100%; /* Take full button height */
+}
+
+.floating-btn .button-text {
+    opacity: 0; /* Keep text hidden by default */
+    transition: opacity 0.3s ease-in-out;
+    padding-left: 10px;
+    display: none; /* Ensure text is completely hidden initially */
+}
+
+.floating-btn.expanded {
+    width: 200px;
+    padding: 10px 20px;
+    justify-content: flex-start;
+}
+
+.floating-btn.expanded .button-text {
+    opacity: 1;
+    display: inline-block; /* Show text when expanded */
+}
+
+/*buttons section end */
+
+/* Photo Gallery Section */
+
+/* Adjusted Photo Gallery Section */
+.carousel-inner img {
+    border: 5px solid #0c0b0b;
+    border-radius: 5px;
+    width: 100%;  /* Ensures the image scales to fit the container */
+    height: auto; /* Maintains the aspect ratio */
+    max-width: 500px; /* Limit the max width so images don't get too big */
+    max-height: 500px; /* Restrict the height */
+    margin: 0 auto; /* Centers the image */
+    display: block;
+}
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.photo-gallery img {
+    width: 45%; /* Adjusted to be similar to Instagram post size */
+    max-width: 300px; /* Ensuring it doesn't get too large */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+    .photo-gallery img {
+        width: 90%; /* Make images more prominent on smaller screens */
+        max-width: 250px;
+    }
 }
 
 
-/* Contact Form Section */
+/* Contact Section */
 .iframe-container {
     position: relative;
     width: 100%;
@@ -151,12 +210,21 @@ body {
 }
 
 .iframe-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     border: none;
+}
+
+@media screen and (max-width: 768px) {
+    .iframe-container {
+        height: 600px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .iframe-container {
+        height: 500px;
+    }
 }
 
 /* Back to Top Button */
@@ -181,38 +249,7 @@ body {
     background-color: #0056b3;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .iframe-container {
-        height: 600px;
-    }
-    
-    .transformation-image-container {
-        max-width: 450px;
-    }
-    
-    .testimonial-text {
-        font-size: 1rem;
-    }
-}
-
 @media screen and (max-width: 576px) {
-    .iframe-container {
-        height: 500px;
-    }
-    
-    .transformation-image-container {
-        max-width: 300px;
-    }
-    
-    .testimonial-text {
-        font-size: 0.9rem;
-    }
-    
-    .treatment-description {
-        font-size: 0.9rem;
-    }
-    
     #backToTop {
         bottom: 20px;
         right: 20px;
@@ -220,16 +257,4 @@ body {
         height: 35px;
         font-size: 18px;
     }
-}
-
-/* Carousel Controls */
-.carousel-control-prev,
-.carousel-control-next {
-    width: 5%;
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-    background-color: rgba(0, 0, 0, 0.3);
 }
