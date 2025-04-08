@@ -12,11 +12,24 @@
     }
 }
 
+.custom-navbar {
+    background-color: #A37B73 !important;  /* Use !important ONLY if necessary */
+  }
+
+.custom-header{
+    background-color: #dbbea1 !important;
+
+}
+
+.custom-header h1 {
+    font-size: 3.5rem; /* or try 3.5rem, depending on how bold you want it */
+    text-shadow: 3px 3px 5px rgba(48, 21, 21, 0.5);
+  }
 /* General Styles */
 body {
-    background-color: #f4f6f8;
+    background-color: #ECF8F8;
     padding-top: 56px;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto','Arial', sans-serif;
 }
 
 /* Navigation */
@@ -28,8 +41,8 @@ body {
 .section-title {
     width: 90%;
     max-width: 400px;
-    color: aliceblue;
-    background-color: #0d6efd;
+    color: black;
+    background-color: #A37B73;
     border-radius: 5px;
     padding: 10px 15px;
     font-size: 2rem;
@@ -90,11 +103,11 @@ body {
 }
 
 #services li:hover {
-    background-color: #ff6b00;
-    color: white;
+    background-color: #C19EE0;
+    color: #555;
     text-shadow: 3px 3px 5px rgba(48, 21, 21, 0.5);
     transform: scale(1.05);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 10px #DAC3E8;
 }
 
 
@@ -114,8 +127,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ff6b00;
-    color: white;
+    background-color: #3F292B;
+    color: #DAC3E8;
     font-size: 20px; /* Increase font size to make icon visible */
     border: 3px solid white;
     border-radius: 50px;
@@ -232,7 +245,7 @@ body {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: #007bff;
+    background-color: #3F292B;
     color: white;
     border: none;
     border-radius: 50%;
@@ -246,7 +259,7 @@ body {
 }
 
 #backToTop:hover {
-    background-color: #0056b3;
+    background-color: #3F292B;
 }
 
 @media screen and (max-width: 576px) {
