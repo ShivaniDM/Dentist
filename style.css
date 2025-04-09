@@ -13,15 +13,21 @@
 }
 
 .custom-navbar {
-    background-color: #FF8FAB !important;  /* Use !important ONLY if necessary */
+    background-color: #DAC3E8 !important;  /* Use !important ONLY if necessary */
   }
 
-.header-img{
-    background-image: url("images\header image.jpg");
-  }
 .custom-header{
-    background-color: #FFE5EC !important; 
-    background-image: url("images\header image.jpg")  !important; 
+    background-image: url("images/header image.jpg")  !important; 
+    background-size: cover;          /* Ensures it covers the whole header */
+    background-repeat: no-repeat;    /* Prevents it from repeating */
+    background-position: center;     /* Keeps the focal point centered */
+    height: 60vh;             ;     /* Adjust this to what you want visually */
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+
 
 }
 
@@ -41,12 +47,88 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+
+
+.about-section {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    border-radius: 12px;
+    background-color: #fefefe;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Enables responsiveness */
+}
+
+.about-image {
+    flex: 0 0 300px;
+    display: flex;
+    align-items: stretch;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.about-text {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 0;
+    color: #333;
+}
+
+/* Optional heading styling for the section title */
+.about-heading {
+    background-color: #a46cd3;
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 8px;
+    margin: 0 auto 20px auto;
+    display: inline-block;
+}
+
+/* Responsive layout for smaller screens */
+@media screen and (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .about-image img {
+        height: auto;
+        object-fit: contain;
+    }
+
+    .about-text {
+        text-align: center;
+        padding-top: 20px;
+    }
+}
+
+
 /* Responsive Headings */
 .section-title {
     width: 90%;
     max-width: 400px;
     color: black;
-    background-color: #FF8FAB;
+    background-color: #B185DB;
     border-radius: 5px;
     padding: 10px 15px;
     font-size: 2rem;
@@ -67,14 +149,21 @@ body {
         width: 75%;
     }
     .custom-header h1 {
-        font-size: 2rem; /* or try 3.5rem, depending on how bold you want it */
+        font-size: 1.8rem; /* or try 3.5rem, depending on how bold you want it */
         text-shadow: 3px 3px 5px rgba(48, 21, 21, 0.5);
       }
-
+      .custom-header{
+        height:40vh;
+      }
 }
 
 /* Services Section */
 #services {
+    background-image: url('images/our services image.jpg');
+    background-size: cover;          /* Ensures it covers the whole header */
+    background-repeat: no-repeat;    /* Prevents it from repeating */
+    background-position: center;     /* Keeps the focal point centered */
+    
     max-width: 800px;
     margin: 50px auto;
     text-align: center;
@@ -89,7 +178,8 @@ body {
 }
 
 #services li {
-    background: #fff;
+
+    background-color: rgba(235, 227, 240, 0.75);
     padding: 12px 20px;
     margin: 10px auto;
     width: 80%;
@@ -103,6 +193,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: left;
+    
 }
 
 #services li::before {
@@ -122,25 +213,28 @@ body {
 
 
 /* buttons for placeholder section */
+/* Floating Action Buttons Container */
 .floating-buttons {
     position: fixed;
-    right: 10px; /* Ensure it's aligned to the right */
+    right: 10px;
     bottom: 100px;
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* Aligns buttons to the right */
+    align-items: flex-end;
     gap: 10px;
-    z-index: 1000; /* Keeps buttons above other content */
+    z-index: 1000;
 }
+
+/* Base Style for Each Button */
 .floating-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #fb6f92;
-    color: #DAC3E8;
-    font-size: 20px; /* Increase font size to make icon visible */
+    background-color: #C19EE0;
+    color: #2f2535;
+    font-size: 16px;
     border: 3px solid white;
-    border-radius: 50px;
+    border-radius: 25px;
     padding: 10px;
     width: 50px;
     height: 50px;
@@ -150,32 +244,42 @@ body {
     white-space: nowrap;
 }
 
+/* Icon container using image */
 .floating-btn .icon {
-    opacity: 1; /* Ensure icon is always visible */
-    font-size: 24px; /* Make icon larger */
-    display: flex; /* Ensure it is centered */
+    width: 36px;
+    height: 36px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%; /* Take full button width */
-    height: 100%; /* Take full button height */
+    flex-shrink: 0;
 }
 
+/* Ensure icon image scales perfectly */
+.floating-btn .icon img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+/* Text is hidden initially */
 .floating-btn .button-text {
-    opacity: 0; /* Keep text hidden by default */
+    opacity: 0;
     transition: opacity 0.3s ease-in-out;
     padding-left: 10px;
-    display: none; /* Ensure text is completely hidden initially */
+    display: none;
 }
 
+/* Expanded state on interaction */
 .floating-btn.expanded {
     width: 200px;
     padding: 10px 20px;
     justify-content: flex-start;
 }
 
+/* Show the label when expanded */
 .floating-btn.expanded .button-text {
     opacity: 1;
-    display: inline-block; /* Show text when expanded */
+    display: inline-block;
 }
 
 /*buttons section end */
@@ -254,7 +358,7 @@ body {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: #FB6F92;
+    background-color: #C19EE0;
     color: white;
     border: none;
     border-radius: 50%;
@@ -268,7 +372,7 @@ body {
 }
 
 #backToTop:hover {
-    background-color: #FB6F92;
+    background-color: #C19EE0;
 }
 
 @media screen and (max-width: 576px) {
@@ -280,3 +384,77 @@ body {
         font-size: 18px;
     }
 }
+
+
+.contact-section {
+    background-color: #efe2f8;
+    padding: 40px 20px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .contact-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #4B0082;
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .clinic-details {
+    flex: 1 1 300px;
+    max-width: 400px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  .clinic-details a {
+    color: #4B0082;
+    text-decoration: none;
+  }
+  
+  .clinic-details a:hover {
+    text-decoration: underline;
+  }
+  
+  .map-container {
+    flex: 1 1 300px;
+    max-width: 500px;
+  }
+
+  
+  .site-footer {
+    background-color: #4B0082;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .footer-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .footer-socials {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .footer-socials a img {
+    width: 36px;
+    height: 36px;
+    transition: transform 0.2s ease;
+  }
+  
+  .footer-socials a:hover img {
+    transform: scale(1.1);
+  }
+  
