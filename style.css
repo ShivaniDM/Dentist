@@ -7,9 +7,19 @@
 
 @media screen and (max-width: 576px) {
     #services li {
-        font-size: 0.6rem; /* Further reduce font size for smaller screens */
+        font-size: 0.8rem; /* Further reduce font size for smaller screens */
         padding: 8px 12px;
     }
+}
+
+
+/* Fix for anchor link scroll with fixed navbar */
+section, 
+#google-reviews, 
+#services, 
+#about, 
+#contact {
+    scroll-margin-top: 70px; /* Match your navbar height */
 }
 
 .custom-navbar {
@@ -284,6 +294,21 @@ body {
 
 /*buttons section end */
 
+
+
+/*google reviews sections */
+#google-reviews .card {
+    border: none;
+    border-radius: 1rem;
+    background-color: #f8f9fa;
+  }
+  #google-reviews .carousel-inner {
+    max-width: 600px;
+    margin: auto;
+  }
+  
+/*google review section end*/  
+
 /* Photo Gallery Section */
 
 /* Adjusted Photo Gallery Section */
@@ -386,7 +411,7 @@ body {
 }
 
 
-.contact-section {
+.visitUs-section {
     background-color: #efe2f8;
     padding: 40px 20px;
     border-top: 1px solid #ddd;
