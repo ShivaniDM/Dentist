@@ -10,6 +10,25 @@
         font-size: 0.8rem; /* Further reduce font size for smaller screens */
         padding: 8px 12px;
     }
+
+    #logo{
+        background-color: rgba(245, 239, 250, 0.5); /* 0.5 = 50% opacity */
+        border: solid 1px white;
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        margin-bottom: 20px;
+    }
+
+    #heading {
+        background-color: rgba(245, 239, 250, 0.5); /* 0.5 = 50% opacity */
+        border: solid 2px #bbb5f8;
+        border-radius: 10px;
+        color: #2f2535;
+        padding: 10px 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
 
 #heading {
