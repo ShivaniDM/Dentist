@@ -13,7 +13,7 @@
 
     #logo{
         background-color: rgba(245, 239, 250, 0.5); /* 0.5 = 50% opacity */
-        border: solid 1px white;
+        border: solid 2px #bbb5f8;
         width: 100px;
         height: 100px;
         border-radius: 100px;
@@ -37,12 +37,14 @@
     border-radius: 10px;
     color: #2f2535;
     padding: 10px 10px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 
 #logo{
     background-color: rgba(245, 239, 250, 0.5); /* 0.5 = 50% opacity */
-    border: solid 2px white;
+    border: solid 2px #bbb5f8;
     border-radius: 100px;
 }
 /* Fix for anchor link scroll with fixed navbar */
